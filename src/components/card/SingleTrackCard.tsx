@@ -71,7 +71,7 @@ const SingleTrackCard = ({
 						fontFamily: font,
 					}}
 				>
-					{track.track.name.slice(0, 30)}
+					{track.track.name.slice(0, 30)}...
 				</Text>
 				<Text
 					style={{

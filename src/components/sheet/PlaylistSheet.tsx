@@ -106,7 +106,7 @@ const PlaylistSheet = ({
 							fontSize: wp(3.8),
 						}}
 					>
-						{playlist.title.slice(0, 22)}
+						{playlist.title.slice(0, 22)}...
 					</Text>
 				</Pressable>
 				<Pressable

@@ -100,7 +100,7 @@ const MusicCard = ({
 									fontFamily: font,
 								}}
 							>
-								{playlist.title}
+								{playlist.title.slice(0, 30)}...
 							</Text>
 							<Text
 								style={{
