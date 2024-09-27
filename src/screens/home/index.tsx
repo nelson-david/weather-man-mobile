@@ -18,6 +18,7 @@ import CogIcon from "../../assets/icons/CogIcon";
 import { useEffect, useRef, useState } from "react";
 import SettingSheet from "../../components/sheet/SettingSheet";
 import PlaylistSheet from "../../components/sheet/PlaylistSheet";
+import { CLIENT_ID, CLIENT_SECRET } from "@env";
 
 const HomeScreen = ({ route }: { route: any }) => {
 	const [theme] = useAtom(bgColor);
@@ -37,13 +38,11 @@ const HomeScreen = ({ route }: { route: any }) => {
 	const currentDate: any = new Date().toString();
 
 	async function getAccessToken() {
-		const clientId = "d8373f3c1f6747d887156ece7600e63e";
-		const clientSecret = "7318c0d70303489fad1d44755287df7f";
 		const url = "https://accounts.spotify.com/api/token";
 		const response = await fetch(url, {
 			method: "POST",
 			headers: {
-				Authorization: "Basic " + btoa(clientId + ":" + clientSecret),
+				Authorization: "Basic " + btoa(CLIENT_ID + ":" + CLIENT_SECRET),
 				"Content-Type": "application/x-www-form-urlencoded",
 			},
 			body: "grant_type=client_credentials",
