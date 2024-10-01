@@ -23,7 +23,7 @@ const App = () => {
 	});
 
 	if (Platform.OS === "android") {
-		NavigationBar.setBackgroundColorAsync("#121212");
+		NavigationBar.setBackgroundColorAsync("#000000");
 	}
 
 	if (!loaded) {

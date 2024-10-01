@@ -1,6 +1,5 @@
 import { useAtom } from "jotai";
 import {
-	Image,
 	ImageBackground,
 	Pressable,
 	StyleSheet,
@@ -19,6 +18,7 @@ import { useEffect, useRef, useState } from "react";
 import SettingSheet from "../../components/sheet/SettingSheet";
 import PlaylistSheet from "../../components/sheet/PlaylistSheet";
 import { CLIENT_ID, CLIENT_SECRET } from "@env";
+import { getWeatherIcon } from "../../utils/helperFunctions";
 
 const HomeScreen = ({ route }: { route: any }) => {
 	const [theme] = useAtom(bgColor);
@@ -117,10 +117,13 @@ const HomeScreen = ({ route }: { route: any }) => {
 					backgroundColor: colorList[theme],
 				}}
 			>
-				<Image
+				<Text style={{ fontSize: wp(40), marginTop: -220 }}>
+					{getWeatherIcon(route.params.weather_data.current.temp_c)}
+				</Text>
+				{/* <Image
 					source={require("../../assets/images/cloud.png")}
 					style={{ width: wp(70), height: wp(70), marginTop: -160 }}
-				/>
+				/> */}
 				<View
 					style={{
 						flex: 1,
@@ -239,6 +242,12 @@ const HomeScreen = ({ route }: { route: any }) => {
 									<Text
 										style={{
 											...styles.temperatureText,
+											fontSize:
+												font === "vonique"
+													? wp(35)
+													: wp(28),
+											letterSpacing:
+												font === "vonique" ? -6 : -5,
 											fontFamily:
 												font === "vonique"
 													? "voniqueBold"
@@ -334,7 +343,7 @@ const styles = StyleSheet.create({
 	locationTitle: {
 		textAlign: "center",
 		letterSpacing: 1.5,
-		fontSize: wp(5.3),
+		fontSize: wp(4.9),
 	},
 	dateContainer: {
 		flexDirection: "row",
@@ -344,10 +353,10 @@ const styles = StyleSheet.create({
 		paddingBottom: 25,
 	},
 	datePointer: {
-		padding: 10,
-		paddingBottom: 9.5,
-		paddingLeft: 18,
-		paddingRight: 18,
+		padding: 9.5,
+		paddingBottom: 9,
+		paddingLeft: 16,
+		paddingRight: 16,
 		flexDirection: "row",
 		justifyContent: "center",
 		alignItems: "center",
@@ -369,7 +378,7 @@ const styles = StyleSheet.create({
 		borderWidth: 0,
 	},
 	weatherTypePointerText: {
-		fontSize: wp(4.5),
+		fontSize: wp(4.3),
 		letterSpacing: 1.5,
 	},
 	temperatureContainer: {
@@ -381,8 +390,6 @@ const styles = StyleSheet.create({
 	},
 	temperatureText: {
 		color: "#000000",
-		fontSize: wp(35),
-		letterSpacing: -6,
 	},
 });
 

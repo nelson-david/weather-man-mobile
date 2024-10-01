@@ -40,9 +40,9 @@ const WeatherDataCard = ({
 						fontFamily: font === "vonique" ? "voniqueBold" : font,
 						fontSize:
 							font === "nothing"
-								? widthPercentageToDP(3.5)
-								: widthPercentageToDP(2.6),
-						letterSpacing: font === "nothing" ? 0.4 : 1.5,
+								? widthPercentageToDP(3.2)
+								: widthPercentageToDP(2.4),
+						letterSpacing: font === "nothing" ? 0.4 : 1.6,
 					}}
 				>
 					{outfitInfo}
@@ -68,8 +68,8 @@ const WeatherDataCard = ({
 							paddingTop: 25,
 							fontFamily:
 								font === "vonique" ? "voniqueBold" : font,
-							fontSize: widthPercentageToDP(5.7),
-							letterSpacing: -0.5,
+							fontSize: widthPercentageToDP(4.9),
+							letterSpacing: 0.2,
 						}}
 					>
 						{wind}km/h
@@ -81,8 +81,8 @@ const WeatherDataCard = ({
 							fontFamily:
 								font === "vonique" ? "voniqueBold" : font,
 							paddingTop: 8,
-							letterSpacing: 1.2,
-							fontSize: widthPercentageToDP(3),
+							letterSpacing: 1,
+							fontSize: widthPercentageToDP(2.7),
 						}}
 					>
 						Wind
@@ -105,8 +105,8 @@ const WeatherDataCard = ({
 							paddingTop: 25,
 							fontFamily:
 								font === "vonique" ? "voniqueBold" : font,
-							fontSize: widthPercentageToDP(5.7),
-							letterSpacing: -0.5,
+							fontSize: widthPercentageToDP(4.9),
+							letterSpacing: 0.2,
 						}}
 					>
 						{humidity}%
@@ -118,8 +118,8 @@ const WeatherDataCard = ({
 							fontFamily:
 								font === "vonique" ? "voniqueBold" : font,
 							paddingTop: 8,
-							letterSpacing: 1.2,
-							fontSize: widthPercentageToDP(3),
+							letterSpacing: 1,
+							fontSize: widthPercentageToDP(2.7),
 						}}
 					>
 						Humidity
@@ -142,8 +142,8 @@ const WeatherDataCard = ({
 							paddingTop: 25,
 							fontFamily:
 								font === "vonique" ? "voniqueBold" : font,
-							fontSize: widthPercentageToDP(5.7),
-							letterSpacing: -0.5,
+							fontSize: widthPercentageToDP(4.9),
+							letterSpacing: 0.2,
 						}}
 					>
 						{visibility}km
@@ -155,8 +155,8 @@ const WeatherDataCard = ({
 							fontFamily:
 								font === "vonique" ? "voniqueBold" : font,
 							paddingTop: 8,
-							letterSpacing: 1.2,
-							fontSize: widthPercentageToDP(3),
+							letterSpacing: 1,
+							fontSize: widthPercentageToDP(2.7),
 						}}
 					>
 						Visibility
